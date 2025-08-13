@@ -10,11 +10,11 @@
 <h2>Установка</h2>
 Клонируйте проект по ссылке https://github.com/Bar1sto/UpTrader.git
 Выполните миграции командами:
-<code>python -m venv venv</code> - создаем вирутальную машину
-<span>python venv/Scripts/Activate</span> - активируем вирутальную машину
-<span>python pip django</span> - устанавливаем Django
-<span>python manage.py makemigrations</span>
-<span>python manage.py migrate</span>
+<ol><code>python -m venv venv</code> - создаем вирутальную машину</ol>
+<ol><code>python venv/Scripts/Activate</code> - активируем вирутальную машину</ol>
+<ol><code>python pip django</code> - устанавливаем Django</ol>
+<ol><code>python manage.py makemigrations</code></ol>
+<ol><code>python manage.py migrate</code></ol>
 
 <h2>Использование</h2>
 <ol>1. Создайте пункты меню через админку</ol>
