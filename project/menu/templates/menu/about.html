@@ -1,0 +1,36 @@
+{% load menu_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>О нас</title>
+    <style>
+      .menu {
+        list-style: none;
+        padding: 0;
+      }
+      .menu-item {
+        margin: 5px 0;
+      }
+      .menu-item a {
+        text-decoration: none;
+        color: #333;
+      }
+      .menu-item a.current {
+        font-weight: bold;
+        color: #000;
+      }
+      .submenu {
+        margin-left: 20px;
+        display: none;
+      }
+      .active > .submenu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Страница "О нас"</h1>
+    {% draw_menu 'main_menu' %}
+    <p>Это страница о компании.</p>
+  </body>
+</html>

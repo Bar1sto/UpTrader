@@ -1,0 +1,27 @@
+<ul class="menu {{ menu_name }}">
+  {% for item_data in menu_tree %}
+  <li class="menu-item {% if item_data.is_active %}active{% endif %}">
+    <a
+      href="{{ item_data.item.get_url }}"
+      class="{% if item_data.is_active %}current{% endif %}"
+    >
+      {{ item_data.item.name }}
+    </a>
+    {% if item_data.children %} {% if item_data.is_active or
+    item_data.has_active_child %}
+    <ul class="submenu">
+      {% for child_data in item_data.children %}
+      <li class="menu-item {% if child_data.is_active %}active{% endif %}">
+        <a
+          href="{{ child_data.item.get_url }}"
+          class="{% if child_data.is_active %}current{% endif %}"
+        >
+          {{ child_data.item.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endif %}
+  </li>
+  {% endfor %}
+</ul>

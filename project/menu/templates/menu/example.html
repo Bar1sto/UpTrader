@@ -1,0 +1,46 @@
+{% load menu_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница меню</title>
+    <style>
+      .menu {
+        list-style-type: none;
+        padding: 0;
+      }
+      .menu-item {
+        margin: 5px 0;
+      }
+      .menu-item a {
+        text-decoration: none;
+        color: #333;
+      }
+      .menu-item a.current {
+        font-weight: bold;
+        color: #000;
+      }
+      .submenu {
+        margin-left: 20px;
+        display: none;
+      }
+      .active > .submenu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Отрисованное меню</h1>
+
+    <h2>Основное меню</h2>
+    {% draw_menu 'main_menu' %}
+
+    <h2>Дополнительное меню</h2>
+    {% draw_menu 'secondary_menu' %}
+
+    <div>
+      <p>Текущий путь: {{ request.path }}</p>
+    </div>
+  </body>
+</html>
