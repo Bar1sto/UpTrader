@@ -10,7 +10,7 @@
 <h2>Установка</h2>
 Клонируйте проект по ссылке https://github.com/Bar1sto/UpTrader.git
 Выполните миграции командами:
-<span>python -m venv venv</span> - создаем вирутальную машину
+<code>python -m venv venv</code> - создаем вирутальную машину
 <span>python venv/Scripts/Activate</span> - активируем вирутальную машину
 <span>python pip django</span> - устанавливаем Django
 <span>python manage.py makemigrations</span>
@@ -18,30 +18,30 @@
 
 <h2>Использование</h2>
 <ol>1. Создайте пункты меню через админку</ol>
-При создании пункта меню укажите:
-Name - название пункта
-Menu name - название меню (например, 'main_menu')
-Parent - родительский пункт (для вложенных меню)
-URL или Named URL:
-URL: относительный путь (например, "/about/")
-Named URL: имя из urls.py (например, "about")
-Order - порядок сортировки (меньше = выше)
-2. Для каждой страницы которую хотите просмотреть надо добавить меню в шаблон
-{% load menu_tags %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Мой сайт</title>
-</head>
-<body>
-    {% draw_menu 'main_menu' %}
-    ...
-</body>
-</html>
-3. Для просмотра новой страницы надо ее добавить в menu/templates/menu
-Пример структуры меню
-Главная (URL: "/", order: 0)
-О нас (URL: "/about/", order: 10)
-Услуги (URL: "/services/", parent: О нас, order: 0)
-Команда (URL: "/team/", parent: О нас, order: 10)
-Контакты (URL: "/contacts/", order: 20)
+<ol></ol>При создании пункта меню укажите:</ol>
+<ol>Name - название пункта</ol>
+<ol>Menu name - название меню (например, 'main_menu')</ol>
+<ol>Parent - родительский пункт (для вложенных меню)</ol>
+<ol>URL или Named URL:</ol>
+<ol>URL: относительный путь (например, "/about/")</ol>
+<ol>Named URL: имя из urls.py (например, "about")</ol>
+<ol>Order - порядок сортировки (меньше = выше)</ol>
+<ol>2. Для каждой страницы которую хотите просмотреть надо добавить меню в шаблон</ol>
+<ol>{% load menu_tags %}</ol>
+<ol><!DOCTYPE html></ol>
+<ol><html></ol>
+<ol><head></ol>
+ <ol>   <title>Мой сайт</title></ol>
+<ol></head></ol>
+<ol><body></ol>
+   <ol> {% draw_menu 'main_menu' %}</ol>
+   <ol> ...</ol>
+<ol></body></ol>
+<ol></html></ol>
+<ol>3. Для просмотра новой страницы надо ее добавить в menu/templates/menu</ol>
+<ol>Пример структуры меню</ol>
+<ol>Главная (URL: "/", order: 0)</ol>
+<ol>О нас (URL: "/about/", order: 10)</ol>
+<ol>Услуги (URL: "/services/", parent: О нас, order: 0)</ol>
+<ol>Команда (URL: "/team/", parent: О нас, order: 10)</ol>
+<ol>Контакты (URL: "/contacts/", order: 20)</ol>
